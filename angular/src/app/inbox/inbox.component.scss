@@ -1,0 +1,62 @@
+#inbox_container{
+    width: 700px;
+    height: 400px;
+    overflow-y: auto;
+    word-wrap: break-word;
+
+    border: 2px solid #dedede;
+    background-color:  #ECE5DD;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.self{
+    
+    text-align: right;
+   
+
+}
+.self{
+    position: relative; 
+	background: #DCF8C6;
+    border-radius: .6em;
+    ::after
+    {
+        content: '';
+	position: absolute; 
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: #DCF8C6;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -10px;  
+	margin-right: -20px;
+    }
+}
+
+
+.message {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: white;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+}
+.notification{
+    text-align: center;
+}

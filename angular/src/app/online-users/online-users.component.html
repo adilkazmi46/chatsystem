@@ -1,0 +1,12 @@
+<div id="online_users">
+  <h1>{{ user }}</h1>
+  <ul>
+    <h3>List of online users</h3>
+    <li *ngFor="let user of users |keyvalue" >{{ user.key }} 
+   
+      <button (click)="onmessage(user.key,user.value)">message </button> 
+      <span class="badge" *ngIf="get_count(user.value)>0">{{ get_count(user.value) }} unread message</span>
+    </li>
+  </ul>
+  </div>
+          

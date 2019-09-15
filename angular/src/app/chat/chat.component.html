@@ -1,0 +1,12 @@
+<div>
+  <form *ngIf="!isLoggedin" [formGroup]="user_form" (ngSumit)="onSubmit()" >
+  <input type="text" formControlName="name"/>
+
+  <button type="submit" (click)="onSubmit()" [disabled]="!user_form.valid">
+add user 
+  </button>
+</form>  
+<button *ngIf="isLoggedin" (click)="onlogout()">logout</button>
+</div>
+ 
+  

@@ -1,0 +1,29 @@
+<div>
+<h3>
+  {{ name }}
+</h3>
+
+<div id="inbox_container" #scrollMe  önload="scrollToBottom()">
+
+<p  [class]="get_class(msg.user_name)" *ngFor="let msg of messages">
+    
+  <strong >{{msg.user_name}}</strong>
+  <br>{{ msg.Message }} 
+<br>
+<sub>
+  {{ msg.date }} &nbsp;{{ msg.time }}
+</sub>
+<br>
+<sub *ngIf="check_seen(msg.user_name)"> 
+  <div *ngIf="msg.seen_time">
+  <strong>seen:</strong>{{ msg.seen_time }}
+</div>
+</sub>
+</p>
+  
+  
+</div>  
+
+<input type="text" [(ngModel)]="user_message"/>
+<button type="submit" (click)="onsubmit()">send</button>
+</div>        
